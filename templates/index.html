@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog on Imran Khan</title>
+</head>
+<body>
+    <h1>About Imran Khan</h1>
+    {% for para in content %}
+        <p>{{ para }}</p>
+    {% endfor %}
+    <hr>
+    <h2>Add a New Blog</h2>
+    <form action="/add_blog" method="post">
+        <textarea name="blog_content" rows="4" cols="50" placeholder="Write your blog here..." required></textarea><br><br>
+        <button type="submit">Add Blog</button>
+    </form>
+</body>
+</html>
